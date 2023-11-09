@@ -9,9 +9,9 @@
 
 문서는 거의 마크다운 형식 아니면 스프레드시트 파일 
 ```
-1-1. Telegram_bot
+* Telegram_bot
 텔레그램 1분 간격 알림봇 
-1-2. mask_rcnn
+* mask_rcnn
 Mask_rcnn 깃허브 레포지토리의 포크 버전, h5 / 샘플파일 등 가중치는 용량 문제로 gitignore
 
 
