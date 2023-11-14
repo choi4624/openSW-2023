@@ -8,8 +8,8 @@ client = OpenAI(api_key=key)
 completion = client.chat.completions.create(
   model="gpt-3.5-turbo",
   messages=[
-    {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
-    {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
+    {"role": "system", "content": "Response as korean language, even request message is english. way is not limited. It can be enable translate English to Korean"},
+    {"role": "user", "content": "why my sofa foam is getting flush?"}
   ]
 )
 
