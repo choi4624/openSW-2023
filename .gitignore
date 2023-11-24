@@ -2,3 +2,5 @@
 .key
 .env
 .conda/*
+.chat_id
+.token
