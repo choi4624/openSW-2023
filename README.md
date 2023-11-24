@@ -9,15 +9,14 @@
 
 문서는 거의 마크다운 형식 아니면 스프레드시트 파일 
 ```
-* Telegram_bot
-텔레그램 1분 간격 알림봇 
-* mask_rcnn
-Mask_rcnn 깃허브 레포지토리의 포크 버전, h5 / 샘플파일 등 가중치는 용량 문제로 gitignore
 
 
 2. 코드 레포지토리 목록
+* Telegram_bot
+텔레그램 알림봇 + 채팅 요청에 맞추어 openai 응답하는 봇 (api key, env 미포함) 
+* mask_rcnn
+Mask_rcnn 깃허브 레포지토리의 포크 버전, h5 / 샘플파일 등 가중치는 용량 문제로 gitignore
 
-지금은 없음 
 
 3. 레포지토리 베이스라인 및 형상 기준
 
@@ -29,7 +28,8 @@ vscode로 깃허브 커밋 풀 푸쉬 등등 진행함. (브랜치 추가도 동
 
 4. 관련 문서 덩어리
 
-
+installation 과정에서 mmcv 문제로 직접 빌드가 필요할 때 
+https://mmcv.readthedocs.io/en/latest/get_started/build.html 
 
 
 ### MASK- rcnn
