@@ -13,22 +13,31 @@
 
 2. 코드 레포지토리 목록
 * Telegram_bot
-텔레그램 알림봇 + 채팅 요청에 맞추어 openai 응답하는 봇 (api key, env 미포함) 
+텔레그램 알림봇 + 채팅 요청에 맞추어 openai 응답하는 봇 (api key, env 미포함) 과제 2, 3
 * mask_rcnn_mmdection
 mmdection을 통해 수행한 과제 1 - 로컬 머신으로 실행하여 추론 및 학습 (샘플데이터인 coco dataset에 대한 1회 추론 전부 진행) 
 * mask_rcnn
-Mask_rcnn 깃허브 레포지토리의 포크 버전, h5 / 샘플파일 등 가중치는 용량 문제로 gitignore
+Mask_rcnn 깃허브 레포지토리의 포크 버전 
+* mask_rcnn_update  
+mask_rcnn레포지토리 통해 수행한 과제 1 - 이 버전으로 진행 
 
 
 3. 레포지토리 베이스라인 및 형상 기준
 
-베이스라인 > 기간 혹은 기능
 과제의 요소 혹은 특정 기간에 맞춰 기준을 잡음 
 
 커밋은 꾸준히 많이 들어감. (틈틈히 백업 혹은 롤백용으로 진행할 수 있도록 함)
 vscode로 깃허브 커밋 풀 푸쉬 등등 진행함. (브랜치 추가도 동일) 
 
-4. 관련 문서 덩어리
+4. 관련 글 덩어리
+
+작동환경 
+proxmox_virtual_machine : qemu-kvm
+hardware-virtualiztion on (for AVX/AVX2)
+24GiB Memory
+ubuntu 22.04 with EFI system
+16processor
+80GB disk 
 
 #### mmdection 과정에서 발생한 문제 
 
