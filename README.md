@@ -14,6 +14,8 @@
 2. 코드 레포지토리 목록
 * Telegram_bot
 텔레그램 알림봇 + 채팅 요청에 맞추어 openai 응답하는 봇 (api key, env 미포함) 
+* mask_rcnn_mmdection
+mmdection을 통해 수행한 과제 1 - 로컬 머신으로 실행하여 추론 및 학습 (샘플데이터인 coco dataset에 대한 1회 추론 전부 진행) 
 * mask_rcnn
 Mask_rcnn 깃허브 레포지토리의 포크 버전, h5 / 샘플파일 등 가중치는 용량 문제로 gitignore
 
