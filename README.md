@@ -12,10 +12,95 @@ pip install tensorboard==1.15.0 tensorflow==1.15.0 tensorflow-estimator==1.15.1 
 
 train python3 'balloon.py의 절대경로' train --dataset='Mask_RCNN/datasets/balloon_dataset의 절대경로' --weights=coco
 
-python3 './Mask_RCNN/samples/balloon/balloon.py' splash --weights='./Mask_RCNN/mask_rcnn_balloon.h5' --image='./Mask_RCNN/balloon/datasets/val/5555705118_3390d70abe_b.jpg'
+레포에서의 예제 python3 ./samples/balloon/balloon.py train --dataset=./balloon/datasets/ --weights=coco
+
+
+test
+
+python3 './samples/balloon/balloon.py' splash --weights='./mask_rcnn_balloon.h5' --image='./balloon/datasets/val/5555705118_3390d70abe_b.jpg'
 
 가끔 먼가 pip 하라는 것도 같이 pip
 
+requirements.txt
+```python
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+_libgcc_mutex=0.1=main
+_openmp_mutex=5.1=1_gnu
+absl-py=2.0.0=pypi_0
+anyio=3.7.1=pypi_0
+astor=0.8.1=pypi_0
+ca-certificates=2023.08.22=h06a4308_0
+certifi=2022.12.7=py37h06a4308_0
+cycler=0.11.0=pypi_0
+exceptiongroup=1.1.3=pypi_0
+fonttools=4.38.0=pypi_0
+gast=0.2.2=pypi_0
+google-pasta=0.2.0=pypi_0
+grpcio=1.59.2=pypi_0
+h11=0.14.0=pypi_0
+h5py=2.10.0=pypi_0
+httpcore=0.17.3=pypi_0
+httpx=0.24.1=pypi_0
+idna=3.4=pypi_0
+imageio=2.31.2=pypi_0
+importlib-metadata=6.7.0=pypi_0
+keras=2.2.5=pypi_0
+keras-applications=1.0.8=pypi_0
+keras-preprocessing=1.1.0=pypi_0
+kiwisolver=1.4.5=pypi_0
+libedit=3.1.20221030=h5eee18b_0
+libffi=3.2.1=hf484d3e_1007
+libgcc-ng=11.2.0=h1234567_1
+libgomp=11.2.0=h1234567_1
+libstdcxx-ng=11.2.0=h1234567_1
+markdown=3.4.4=pypi_0
+markupsafe=2.1.3=pypi_0
+matplotlib=3.5.3=pypi_0
+mrcnn=0.2=pypi_0
+ncurses=6.4=h6a678d5_0
+networkx=2.6.3=pypi_0
+numpy=1.18.5=pypi_0
+openssl=1.0.2u=h7b6447c_0
+opt-einsum=3.3.0=pypi_0
+packaging=23.2=pypi_0
+pillow=9.5.0=pypi_0
+pip=22.3.1=py37h06a4308_0
+protobuf=3.20.3=pypi_0
+pyparsing=3.1.1=pypi_0
+python=3.7.0=h6e4f718_3
+python-dateutil=2.8.2=pypi_0
+python-telegram-bot=20.3=pypi_0
+pywavelets=1.3.0=pypi_0
+pyyaml=6.0.1=pypi_0
+readline=7.0=h7b6447c_5
+scikit-image=0.16.2=pypi_0
+scipy=1.7.3=pypi_0
+setuptools=65.6.3=py37h06a4308_0
+six=1.16.0=pypi_0
+sniffio=1.3.0=pypi_0
+sqlite=3.33.0=h62c20be_0
+tensorboard=1.15.0=pypi_0
+tensorflow=1.15.0=pypi_0
+tensorflow-estimator=1.15.1=pypi_0
+tensorflow-gpu=1.15.2=pypi_0
+tensorflow-gpu-estimator=2.1.0=pypi_0
+termcolor=2.3.0=pypi_0
+tk=8.6.12=h1ccaba5_0
+typing-extensions=4.7.1=pypi_0
+werkzeug=2.2.3=pypi_0
+wheel=0.38.4=py37h06a4308_0
+wrapt=1.16.0=pypi_0
+xz=5.4.2=h5eee18b_0
+zipp=3.15.0=pypi_0
+zlib=1.2.13=h5eee18b_0
+```
+
+결과물 
+
+![cpu러닝](assets/2023-11-24_150527.png)
+![노란풍선 영역 확인](assets/splash_20231124T145808.png)
 
 ----
 
