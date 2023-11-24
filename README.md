@@ -1,12 +1,18 @@
-conda virtual env 
+## mask_rcnn working (ubuntu22.04, cpu-only)
+
+* git 최대 파일크기 제한 문제 + 데이터셋 문제로 인해 balloon dataset과 h5 가중치는 아래 링크를 통해 받아야 합니다. 
+```
+https://i4624.tk/sharing/bu7QdGVWR
+contact: choi4624@gmail.com
+```
+https://i4624.tk/sharing/bu7QdGVWR
 
 conda activate tf115 
-
 
 MASK- rcnn
 https://m.blog.naver.com/adamdoha/221906246483
 
-pip requirements
+pip requirements or view the requirements.txt from conda (below)
 
 pip install tensorboard==1.15.0 tensorflow==1.15.0 tensorflow-estimator==1.15.1 tensorflow-gpu==1.15.2 tensorflow-gpu-estimator==2.1.0 Keras==2.2.5 Keras-Applications==1.0.8 Keras-Preprocessing==1.1.0
 
@@ -21,7 +27,7 @@ python3 './samples/balloon/balloon.py' splash --weights='./mask_rcnn_balloon.h5'
 
 가끔 먼가 pip 하라는 것도 같이 pip
 
-requirements.txt
+requirements.txt from conda 
 ```python
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
