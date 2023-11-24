@@ -1,3 +1,24 @@
+conda virtual env 
+
+conda activate tf115 
+
+
+MASK- rcnn
+https://m.blog.naver.com/adamdoha/221906246483
+
+pip requirements
+
+pip install tensorboard==1.15.0 tensorflow==1.15.0 tensorflow-estimator==1.15.1 tensorflow-gpu==1.15.2 tensorflow-gpu-estimator==2.1.0 Keras==2.2.5 Keras-Applications==1.0.8 Keras-Preprocessing==1.1.0
+
+train python3 'balloon.py의 절대경로' train --dataset='Mask_RCNN/datasets/balloon_dataset의 절대경로' --weights=coco
+
+python3 './Mask_RCNN/samples/balloon/balloon.py' splash --weights='./Mask_RCNN/mask_rcnn_balloon.h5' --image='./Mask_RCNN/balloon/datasets/val/5555705118_3390d70abe_b.jpg'
+
+가끔 먼가 pip 하라는 것도 같이 pip
+
+
+----
+
 # Mask R-CNN for Object Detection and Segmentation
 
 This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Python 3, Keras, and TensorFlow. The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
