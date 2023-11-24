@@ -1,3 +1,178 @@
+
+conda activate openmmlab 
+
+MASK- rcnn
+https://m.blog.naver.com/adamdoha/221906246483
+
+** mmcv 오류가 발생하는 경우 아래의 Build-on-linux에 맞추어 mmcv를 별도로 빌드 후 설치 
+
+https://mmcv.readthedocs.io/en/latest/get_started/build.html#build-on-linux 
+
+
+최종적으로 작성하게 되는 명렁어 (터미널)
+프로젝트 루트 폴더에서 시작
+```
+python tools/test.py configs/mask_rcnn/mask-rcnn_r50-caffe_fpn_ms-poly-2x_coco.py checkpoint/mask_rcnn_r50_caffe_fpn_mstrain-poly_2x_coco_bbox_mAP-0.403__segm_mAP-0.365_20200504_231822-a75c98ce.pth --show-dir results
+```
+관련 실행 명령어 자료 
+https://mmdetection.readthedocs.io/en/v3.0.0/user_guides/test.html
+
+사용한 가중치 
+checkpoint/mask_rcnn_r50_caffe_fpn_mstrain-poly_2x_coco_bbox_mAP-0.403__segm_mAP-0.365_20200504_231822-a75c98ce.pth
+
+결과물 링크 
+```./work_dirs/mask-rcnn_r50-caffe_fpn_ms-poly-2x_coco```
+
+
+requirements(from conda)
+```python
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+_libgcc_mutex=0.1=main
+_openmp_mutex=5.1=1_gnu
+addict=2.4.0=pypi_0
+aliyun-python-sdk-core=2.14.0=pypi_0
+aliyun-python-sdk-kms=2.16.2=pypi_0
+blas=1.0=mkl
+brotli-python=1.0.9=py38h6a678d5_7
+bzip2=1.0.8=h7b6447c_0
+ca-certificates=2023.08.22=h06a4308_0
+certifi=2023.7.22=py38h06a4308_0
+cffi=1.15.1=py38h5eee18b_3
+charset-normalizer=2.0.4=pyhd3eb1b0_0
+click=8.1.7=pypi_0
+colorama=0.4.6=pypi_0
+contourpy=1.1.1=pypi_0
+cpuonly=2.0=0
+crcmod=1.7=pypi_0
+cryptography=41.0.3=py38hdda0065_0
+cycler=0.12.1=pypi_0
+cython=3.0.5=pypi_0
+ffmpeg=4.3=hf484d3e_0
+filelock=3.9.0=py38h06a4308_0
+fonttools=4.44.0=pypi_0
+freetype=2.12.1=h4a9f257_0
+giflib=5.2.1=h5eee18b_3
+gmp=6.2.1=h295c915_3
+gmpy2=2.1.2=py38heeb90bb_0
+gnutls=3.6.15=he1e5248_0
+idna=3.4=py38h06a4308_0
+importlib-metadata=6.8.0=pypi_0
+importlib-resources=6.1.1=pypi_0
+intel-openmp=2023.1.0=hdb19cb5_46305
+jinja2=3.1.2=py38h06a4308_0
+jmespath=0.10.0=pypi_0
+jpeg=9e=h5eee18b_1
+kiwisolver=1.4.5=pypi_0
+lame=3.100=h7b6447c_0
+lcms2=2.12=h3be6417_0
+ld_impl_linux-64=2.38=h1181459_1
+lerc=3.0=h295c915_0
+libdeflate=1.17=h5eee18b_1
+libffi=3.4.4=h6a678d5_0
+libgcc-ng=11.2.0=h1234567_1
+libgomp=11.2.0=h1234567_1
+libiconv=1.16=h7f8727e_2
+libidn2=2.3.4=h5eee18b_0
+libjpeg-turbo=2.0.0=h9bf148f_0
+libpng=1.6.39=h5eee18b_0
+libstdcxx-ng=11.2.0=h1234567_1
+libtasn1=4.19.0=h5eee18b_0
+libtiff=4.5.1=h6a678d5_0
+libunistring=0.9.10=h27cfd23_0
+libwebp=1.3.2=h11a3e52_0
+libwebp-base=1.3.2=h5eee18b_0
+llvm-openmp=14.0.6=h9e868ea_0
+lz4-c=1.9.4=h6a678d5_0
+markdown=3.5.1=pypi_0
+markdown-it-py=3.0.0=pypi_0
+markupsafe=2.1.1=py38h7f8727e_0
+matplotlib=3.7.3=pypi_0
+mdurl=0.1.2=pypi_0
+mkl=2023.1.0=h213fc3f_46343
+mkl-service=2.4.0=py38h5eee18b_1
+mkl_fft=1.3.8=py38h5eee18b_0
+mkl_random=1.2.4=py38hdb19cb5_0
+mmcv=2.1.0=dev_0
+mmdet=3.2.0=dev_0
+mmengine=0.9.1=pypi_0
+model-index=0.1.11=pypi_0
+mpc=1.1.0=h10f8cd9_1
+mpfr=4.0.2=hb69a4c5_1
+mpmath=1.3.0=py38h06a4308_0
+ncurses=6.4=h6a678d5_0
+nettle=3.7.3=hbbd107a_1
+networkx=3.1=py38h06a4308_0
+ninja=1.11.1.1=pypi_0
+numpy=1.24.3=py38hf6e8229_1
+numpy-base=1.24.3=py38h060ed82_1
+opencv-python=4.8.1.78=pypi_0
+opendatalab=0.0.10=pypi_0
+openh264=2.1.1=h4ff587b_0
+openjpeg=2.4.0=h3ad879b_0
+openmim=0.3.9=pypi_0
+openssl=3.0.12=h7f8727e_0
+openxlab=0.0.28=pypi_0
+ordered-set=4.1.0=pypi_0
+oss2=2.17.0=pypi_0
+packaging=23.2=pypi_0
+pandas=2.0.3=pypi_0
+pillow=10.0.1=py38ha6cbd5a_0
+pip=23.3=py38h06a4308_0
+platformdirs=3.11.0=pypi_0
+psutil=5.9.6=pypi_0
+pycocotools=2.0.7=pypi_0
+pycparser=2.21=pyhd3eb1b0_0
+pycryptodome=3.19.0=pypi_0
+pygments=2.16.1=pypi_0
+pyopenssl=23.2.0=py38h06a4308_0
+pyparsing=3.1.1=pypi_0
+pysocks=1.7.1=py38h06a4308_0
+python=3.8.18=h955ad1f_0
+python-dateutil=2.8.2=pypi_0
+pytorch=2.1.0=py3.8_cpu_0
+pytorch-mutex=1.0=cpu
+pytz=2023.3.post1=pypi_0
+pyyaml=6.0.1=py38h5eee18b_0
+readline=8.2=h5eee18b_0
+requests=2.28.2=pypi_0
+rich=13.4.2=pypi_0
+scipy=1.10.1=pypi_0
+setuptools=60.2.0=pypi_0
+shapely=2.0.2=pypi_0
+six=1.16.0=pypi_0
+sqlite=3.41.2=h5eee18b_0
+sympy=1.11.1=py38h06a4308_0
+tabulate=0.9.0=pypi_0
+tbb=2021.8.0=hdb19cb5_0
+termcolor=2.3.0=pypi_0
+terminaltables=3.1.10=pypi_0
+tk=8.6.12=h1ccaba5_0
+tomli=2.0.1=pypi_0
+torchvision=0.16.0=py38_cpu
+tqdm=4.65.2=pypi_0
+typing_extensions=4.7.1=py38h06a4308_0
+tzdata=2023.3=pypi_0
+urllib3=1.26.18=py38h06a4308_0
+wheel=0.41.2=py38h06a4308_0
+xz=5.4.2=h5eee18b_0
+yaml=0.2.5=h7b6447c_0
+yapf=0.40.2=pypi_0
+zipp=3.17.0=pypi_0
+zlib=1.2.13=h5eee18b_0
+zstd=1.5.5=hc292b87_0
+```
+
+수행 결과 
+![working_image_use_cpu](resources/2023-11-24_143239.png)
+![model_results](resources/000000126137.jpg)
+
+----
+original Readme
+----
+
+
 <div align="center">
   <img src="resources/mmdet-logo.png" width="600"/>
   <div>&nbsp;</div>
