@@ -28,7 +28,13 @@ vscode로 깃허브 커밋 풀 푸쉬 등등 진행함. (브랜치 추가도 동
 
 4. 관련 문서 덩어리
 
-installation 과정에서 mmcv 문제로 직접 빌드가 필요할 때 
+#### mmdection 과정에서 발생한 문제 
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for mmcv-full
+  Running setup.py clean for mmcv-full
+
+installation 과정에서 mmcv 문제로 직접 빌드가 필요할 때 아래 문서를 참고하여 mmcv custom 빌드 후 다시 실행 
 https://mmcv.readthedocs.io/en/latest/get_started/build.html 
 
 
