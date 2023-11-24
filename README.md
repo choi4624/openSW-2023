@@ -1,6 +1,6 @@
 ## openSW 수업 관련 레포지토리 
 
-1. 구조소개
+구조소개
 
 ```
 메인 <- 모든게 다 들어간 폴더 
@@ -9,17 +9,37 @@
 
 문서는 거의 마크다운 형식 아니면 스프레드시트 파일 
 ```
-df
-2. 코드 레포지토리 목록
 
-지금은 없음 
+### telegram bot series 
 
-3. 레포지토리 베이스라인 및 형상 기준
+```bash
+.env
+.chat_id
+.key
+.token
+```
+4개는 미포함 
 
-베이스라인 > 기간 혹은 기능
-과제의 요소 혹은 특정 기간에 맞춰 기준을 잡음 
+async_timer.py
+* 대략 1800초(python async 동작 방식으로 인해 ms단위 오차가 있음) 단위로 알림이 등장하는 코드. 서울 시간대 기준 
 
-커밋은 꾸준히 많이 들어감. (틈틈히 백업 혹은 롤백용으로 진행할 수 있도록 함)
-vscode로 깃허브 커밋 풀 푸쉬 등등 진행함. (브랜치 추가도 동일) 
+open_ai_bot.py 
+* 요청이 오면 그에 맞추어 finetuning 된 메시지를 내보내는 코드 
+* finetuning setting 
+```markdown
+Response as korean language, even request message is english. way is not limited. It can be enable translate English to Korean
+```
+* 작동방식 
+```
+코드 실행 - 마지막 메시지 확인 - openAI api로 요청 보내기 - 응답 - 다른 메시지 확인하기  - 요청이 있으면 api로 요청 보내기 - 반복
+                                                                                    - 요청이 없으면 10초간 대기 후 다시 메시지 확인 - 반복  
+```
 
-4. 관련 문서 덩어리
+### 결과 이미지 
+
+![2번 알림 메시지](resources/2023-11-24_144357.png)
+![3번 요청 응답 메시지-콘솔 텍스트](resources/2023-11-24_113052.png)
+![3번 요청 응답 메시지-첫 요청](resources/2023-11-24_145059.png)
+![3번 요청 응답 메시지 - 추가 설명](resources/2023-11-24_112945.png)
+![3번 요청 응답 메시지 - 파인튜닝 실패](resources/2023-11-24_112956.png)
+![3번 요청 응답 메시지 - 파인튜닝 성공](resources/2023-11-24_113116.png)

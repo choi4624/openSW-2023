@@ -6,7 +6,7 @@ import schedule
 import telegram
 
 # Define the delay between each call to the job() function
-DELAY = 60.0000
+DELAY = 1800.0000
 
 
 
