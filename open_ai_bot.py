@@ -73,8 +73,8 @@ async def job():
         print('chat' + chat_sentence)
     # Wait for the message to be sent before returning
         await message(token, chat_id,chat_sentence)
-    ## due to the loop is "run_until_complete", it can be next loop at after message sent. 
-    ## it may be 0.3 ~ 1sec 
+    else:
+        await asyncio.sleep(10)
 
 
 async def message(token, chat_id, chat_sentence):
