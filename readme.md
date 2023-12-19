@@ -6,6 +6,7 @@ llama CPP 를 거의 반드시 써야 함
 그리고 llama CPP 내의 제약조건으로 인해, 생각보다 큰 데이터를 그냥 집어넣기 어려운 부분도 있음 
 
 alpha.py -> pdf tokenizer 테스트 
+
 hf3_crawl_work.py -> beomi/llama-2-ko-7b 기반의 huggingFace model 로 수행한 웹 사이트 통째로 가져온 다음, 모델을 통해 요약 
 
 hf_pdf_short_work.py -> llamaCPP 적용 이전의 huggingFace 사용 PDF 요약 시도 MAP 단계에서는 openAI를 이용하고 reduce는 hf 모델을 이용하도록 설정해본 시도 
@@ -25,4 +26,5 @@ llama-2-7b-chat.Q4_K_M.gguf
 https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF 
 성능적인 문제가 굉장히 강해서, 부득이 약한 수준의 모델을 이용 (대략 6GiB의 메모리 사용)
 
+working_screenshot 폴더에서 사용하는 스크린샷 확인 가능 
 

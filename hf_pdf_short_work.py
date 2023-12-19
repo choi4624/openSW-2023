@@ -16,7 +16,7 @@ os.environ['OPENAI_API_KEY'] = openaikey
 # ========== ① 문서로드 ========== #
 
 # PDF 파일 로드
-loader = PyPDFLoader("./langchain/noukome.pdf")
+loader = PyPDFLoader("./langchain/short.pdf")
 document = loader.load()
 document[0].page_content[:200]
 
