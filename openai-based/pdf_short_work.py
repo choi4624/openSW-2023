@@ -16,17 +16,18 @@ os.environ['OPENAI_API_KEY'] = openaikey
 # ========== ① 문서로드 ========== #
 
 # PDF 파일 로드
-loader = PyPDFLoader("./data/noukome.pdf")
+loader = PyPDFLoader("./langchain/noukome.pdf")
 document = loader.load()
 document[0].page_content[:200]
 
+print(document)
 # ========== ② 문서분할 ========== #
 
 # 스플리터 지정
 text_splitter = CharacterTextSplitter.from_tiktoken_encoder(
-    separator="\n\n",  # 분할기준
-    chunk_size=3000,   # 사이즈
-    chunk_overlap=500, # 중첩 사이즈
+    separator=None  # 분할기준
+    chunk_size=512,   # 사이즈
+    chunk_overlap=64, # 중첩 사이즈
 )
 
 # 분할 실행
@@ -44,13 +45,15 @@ map_template = """다음은 문서 중 일부 내용입니다
 이 문서 목록을 기반으로 주요 내용을 요약해 주세요.
 답변:"""
 
+
+
+# First model (map generation)
+llm_map = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo-16k')
 # Map 프롬프트 완성
 map_prompt = PromptTemplate.from_template(map_template)
+map_chain = LLMChain(llm=llm_map, prompt=map_prompt)
 
-# Map에서 수행할 LLMChain 정의
-llm = ChatOpenAI(temperature=0, 
-                 model_name='gpt-3.5-turbo-16k')
-map_chain = LLMChain(llm=llm, prompt=map_prompt)
+print(map_template)
 
 # ========== ④ Reduce 단계 ========== #
 
@@ -60,11 +63,12 @@ reduce_template = """다음은 요약의 집합입니다:
 이것들을 바탕으로 통합된 요약을 만들어 주세요.
 답변:"""
 
+print(reduce_template)
 # Reduce 프롬프트 완성
 reduce_prompt = PromptTemplate.from_template(reduce_template)
 
 # Reduce에서 수행할 LLMChain 정의
-reduce_chain = LLMChain(llm=llm, prompt=reduce_prompt)
+reduce_chain = LLMChain(llm=llm_map, prompt=reduce_prompt)
 
 # 문서의 목록을 받아들여, 이를 단일 문자열로 결합하고, 이를 LLMChain에 전달합니다.
 combine_documents_chain = StuffDocumentsChain(
