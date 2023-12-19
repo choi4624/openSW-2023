@@ -23,6 +23,6 @@ work.py -> 다른 작업 이전에, huggingFace 모델을 불러와서 로컬에
 사용한 모델 
 llama-2-7b-chat.Q4_K_M.gguf 
 https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF 
-성능적인 문제가 굉장히 강해서, 부득이 약간 수준의 모델을 이용 (대략 6GiB의 메모리 사용)
+성능적인 문제가 굉장히 강해서, 부득이 약한 수준의 모델을 이용 (대략 6GiB의 메모리 사용)
 
 
